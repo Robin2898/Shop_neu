@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond:regular,500,600,700,800,italic,500italic,600italic,700italic,800italic);
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .flex-item-left {
+    padding-top: 30px;
+    flex: 25%;
+    margin: 0;
+    text-align: center;
+  }
+
+  
+  .flex-item-unten-left {
+    padding: 30px;
+    padding-left: 20px;
+    flex: 25%;
+    text-align: left;
+  }
+  
+  @media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  }
+
+  #unten{
+    background-color: rgb(94, 120, 160);
+    margin: auto;
+    width: 280px;
+    min-height: 120px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Georgia;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  h1 {
+    font-family: Georgia;
+    font-size: 33px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: rgb(222, 228, 236);
+  } 
+
+  #picture3 {
+    height: 280px;
+    width: 280px;
+    cursor: pointer;
+  }
+
+  .allgemein{
+    padding-top: 30px;
+    background-color: rgb(222, 228, 236);
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .mat-button{
+    font-size: 18px;
+    font-family: Georgia;
+  }

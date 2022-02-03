@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de" class="notranslate" translate="no">    
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+  <div class="allgemein">
+  <form class="example-form">
+  <div class="headline">
+    <h1>Kontaktformular</h1>
+  </div>
+  <p>
+    <mat-form-field class="anrede" appearance="fill">
+      <mat-label>Anrede</mat-label>
+      <mat-select name="anrede" [(ngModel)]="this.kontakt.anrede" required="required" autocomplete="off">
+        <mat-option selected>Bitte auswählen</mat-option>
+        <mat-option value="Herr">Herr</mat-option>
+        <mat-option value="Frau">Frau</mat-option>
+        <mat-option value="Divers">Divers</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="unten" appearance="fill">
+      <mat-label>Vorname</mat-label>
+      <input matInput name="vorname" [(ngModel)]="this.kontakt.vorname" required="required" autocomplete="off">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="unten" appearance="fill">
+      <mat-label>Nachname</mat-label>
+      <input matInput name="nachname" [(ngModel)]="this.kontakt.nachname" required="required" autocomplete="off">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="unten" appearance="fill">
+      <mat-label>E-Mail</mat-label>
+      <input matInput name="email" [(ngModel)]="this.kontakt.email" required="required" autocomplete="off">
+    </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="unten" appearance="fill">
+      <mat-label>Telefonnummer</mat-label>
+      <input matInput name="telefonnummer" [(ngModel)]="this.kontakt.telefonnummer" type="number" pattern="/^-?\d+\.?\d*$/" required="required" autocomplete="off">
+    </mat-form-field>
+</p>
+    <div class="form-group">
+      <mat-form-field class="Nachricht">
+        <mat-label>Ihre Nachricht an uns: </mat-label>
+        <textarea matInput
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="20"
+                  autocomplete="off"
+                  pattern="/^-?\d+\.?\d*$/"
+                  type="textarea"
+                  name="nachricht"
+                  required="required"
+                  [(ngModel)]="this.kontakt.nachricht"></textarea>
+      </mat-form-field>
+    </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" (change)="toggleEditable($event)">
+          <label class="form-check-label" for="gridCheck">
+            Ich bin mit der Verarbeitung meiner Daten zur Kontaktaufnahme einverstanden.
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn" (click) ="wertenichtleer(kontakt);" style="float: right;">Absenden</button>
+</form>
+</div>
+</body>
+</html>

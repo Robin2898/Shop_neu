@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de" class="notranslate" translate="no">    
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+    <div class="allgemein">
+<div class="flex-container">
+        <div class="flex-item-left" *ngFor = "let elem of Kategorien">
+                <img mat-card-image src={{elem.bild}} (click) = "onimageclick(elem.bezeichnung)" alt="Bild kann nicht geladen werden" id="picture3">
+            <mat-card-content>
+                <p id="unten" (click) = "onimageclick(elem.bezeichnung)">{{elem.bezeichnung}}</p>
+            </mat-card-content>
+        </div>
+</div>
+<div class="flex-container">
+    <div class="flex-item-unten-left">
+      <button mat-button style ="color:black;" (click) = "navigatekategorien();" >Zurück</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

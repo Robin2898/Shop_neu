@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de" class="notranslate" translate="no">    
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+  <div class="allgemein">
+  <form class="example-form">
+  <div class="headline">
+    <h1>Neue Produkte im Online-Shop hinzufügen</h1>
+  </div>
+  <p>
+    <mat-form-field class="unten" appearance="fill">
+      <mat-label>Artikelkategorie</mat-label>
+      <mat-select name="artikelkategorien"  [(ngModel)]="this.artikel.kategorie" required="required" autocomplete="off">
+        <mat-option selected>Bitte auswählen</mat-option>
+        <mat-option value="Kantholz">Kantholz</mat-option>
+        <mat-option value="Schlummerlampen">Schlummerlampen</mat-option>
+        <mat-option value="Betonleuchten">Betonlampen</mat-option>
+        <mat-option value="Betonfiguren">Betonfiguren</mat-option>
+        <mat-option value="Holzaufsteller">Holzaufsteller</mat-option>
+        <mat-option value="Holzfiguren">Holzfiguren</mat-option>
+        <mat-option value="Holzschilder">Holzschilder</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="unten" appearance="fill">
+      <mat-label>Produktbezeichnung</mat-label>
+      <input matInput name="produktbezeichnung" [(ngModel)]="this.artikel.produktname" required="required" autocomplete="off">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="unten" appearance="fill">
+      <mat-label>Zusatzinfo (Optional)</mat-label>
+      <input matInput name="zusatzinfo" [(ngModel)]="this.artikel.zusatzinfo" autocomplete="off">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="unten" appearance="fill">
+      <mat-label>Maße (H x B x L)</mat-label>
+      <input matInput name="h_x_b_x_l" [(ngModel)]="this.artikel.h_x_b_x_l"required="required" autocomplete="off">
+    </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="unten" appearance="fill">
+      <mat-label>Produktinformation</mat-label>
+      <input matInput name="produktinformation" [(ngModel)]="this.artikel.produktinformation" required="required" autocomplete="off">
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="unten" appearance="fill">
+    <mat-label>Produktdetails</mat-label>
+    <input matInput name="produktdetails" [(ngModel)]="this.artikel.produktdetails" required="required" autocomplete="off">
+  </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="unten" appearance="fill">
+    <mat-label>Besonderheiten</mat-label>
+    <input matInput name="besonderheiten" [(ngModel)]="this.artikel.besonderheiten" required="required" autocomplete="off">
+  </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="unten" appearance="fill">
+    <mat-label>Preis</mat-label>
+    <input matInput name="preis" type="number" pattern="/^-?\d+\.?\d*$/" [(ngModel)]="this.artikel.preis" required="required" autocomplete="off">
+  </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="unten" appearance="fill">
+    <mat-label>Bild</mat-label>
+    <input matInput name="bild" [(ngModel)]="this.artikel.bild" required="required" autocomplete="off">
+  </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="unten" appearance="fill">
+    <mat-label>Bestandsmenge</mat-label>
+    <input matInput name="bestandsmenge" type="number" pattern="/^-?\d+\.?\d*$/" [(ngModel)]="this.artikel.bestandsmenge" required="required" autocomplete="off">
+  </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="unten" appearance="fill">
+    <mat-label>Personalisierung (Optional)</mat-label>
+    <input matInput name="personalisierung" [(ngModel)]="this.artikel.personalisierung" autocomplete="off">
+  </mat-form-field>
+</p>
+      <button type="submit" class="btn" (click) ="wertenichtleer(artikel);" style="float: right;">Produkt dem Shop hinzufügen</button>
+</form>
+</div>
+</body>
+</html>

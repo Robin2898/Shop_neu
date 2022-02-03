@@ -1,0 +1,112 @@
+          h1 {
+            font-family: Georgia;
+            font-size: 33px;
+            padding-bottom: 20px;
+            text-align: center;
+            background-color: rgb(222, 228, 236);
+          } 
+          
+          .example-form {
+            min-width: 100px;
+            max-width: 700px;
+            width: 100%;
+          }
+          
+          .allgemein{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 30px; 
+            padding-bottom: 30px;
+            padding: 20px;
+          }
+          
+            .oben {
+              color: black; 
+              font-size: 18px;
+              min-width: 100px;
+              max-width: 700px;
+              width: 100%;
+            }
+          
+            .unten {
+              color: black;
+              font-size: 18px;
+              min-width: 100px;
+              max-width: 700px;
+              width: 100%;
+            }
+          
+            .flex-container {
+              display: flex;
+              flex-wrap: wrap;
+              padding-right: 20px;
+              padding-left: 20px;
+            }
+          
+            mat-label {
+              font-size: 18px;
+              font-family: Georgia; 
+            }
+          
+            .Nachricht, .form-check{
+              min-width: 100px;
+              max-width: 350px;
+              width: 100%;
+              font-family: Georgia;
+            }
+
+            .anrede {
+              margin-right: 12px;
+              color: black;
+              font-size: 18px;
+              min-width: 250px;
+              max-width: 350px;
+              width: 50%;
+            }
+          
+            .form-check{
+              min-width: 300px;
+              max-width: 700px;
+              width: 100%;
+              font-size: 18px;
+            }
+          
+            #headline{
+              text-align: center;
+          }
+          
+          * {
+            box-sizing: border-box;
+          }
+          
+          button, .btn{
+            background: rgb(94, 120, 160);
+            color: white;
+            border: rgb(94, 120, 160);
+          }
+          
+          button:hover{
+            background: rgb(94, 120, 160);
+          }
+          
+          .Zurück{
+            font-size: 18px;
+            font-family: Georgia;
+          }
+          
+          Input{
+            font-family: Georgia;
+            font-size: 18px;
+          }
+
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          input[type=number] {
+            -moz-appearance: textfield;
+          }

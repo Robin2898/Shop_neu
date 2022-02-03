@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de" class="notranslate" translate="no">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+               initial-scale=1">
+</head>
+
+<body>
+  <div class="allgemein">
+    <div class="headline">
+      <h1>
+        {{this.artikel.produktname}}
+      </h1>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item-left">
+        <img mat-card-image src={{this.artikel.bild}} alt="Bild kann nicht geladen werden" id="picture3">
+      </div>
+
+      <div class="flex-item-right">
+        <p>
+          <strong>Artikelinformationen & Maße:</strong>
+        </p>
+        <p>
+          {{this.artikel.produktname}}
+        </p>
+        <span *ngIf="this.artikel.zusatzinfo != ''">
+        <span *ngIf="this.artikel.zusatzinfo != null">
+          <p>
+            {{this.artikel.zusatzinfo}}<span *ngIf="this.artikel.kategorie === 'Schlummerlampen'"><button mat-button
+                style="color:grey;" name="test" id="neu" (click)="navigatezusatzinfo();">
+                <mat-icon matTooltip="Zusatzinfo">info</mat-icon>
+              </button></span>
+          </p>
+        </span>
+        </span>
+        <span *ngIf="this.artikel.personalisierung != ''">
+        <span *ngIf="this.artikel.personalisierung != null">
+          <p>
+            <strong>Personalisierungsoptionen:&nbsp;</strong><br>{{this.artikel.personalisierung}}
+          </p>
+        </span>
+        </span>
+        <p>
+          H x B x T:&nbsp;{{this.artikel.h_x_b_x_l}}
+        </p>
+        <p>
+          {{this.artikel.produktinformation}}
+        </p>
+        <p>
+          {{this.artikel.produktdetails}}
+        </p>
+        <p>
+          {{this.artikel.besonderheiten}}
+        </p>
+        <p>
+          <strong>{{this.artikel.preis | currency : 'EUR' : '' : '0.2' }}&nbsp;€</strong>
+        </p>
+        <p>
+          MwSt. wird nicht ausgewiesen (Kleinunternehmer, § 19 UStG), zzgl. Versand
+        </p>
+        <p>
+          <input type="number" pattern="/^-?\d+\.?\d*$/" min="1" matInput [(ngModel)]="this.menge" name="menge"
+            placeholder="Menge" autocomplete="off">
+          <button mat-button style="color:black;" (click)="navigateWarenkorb();"
+            [disabled]="this.artikel.bestandsmenge === 0">In den Warenkorb</button>
+          <button mat-icon-button (click)="toggleEditable()">
+
+            <mat-icon *ngIf="wunschliste" style="color:red;" aria-label="Example icon-button with a heart icon"
+              matTooltip="Wunschliste">
+              favorite
+            </mat-icon>
+
+            <mat-icon *ngIf="!wunschliste" aria-label="Example icon-button with a heart icon" matTooltip="Wunschliste">
+              favorite_border
+            </mat-icon>
+
+          </button>
+        </p>
+        <p>
+          <button mat-button style="color:black;" (click)="navigateHome(artikel);">Zurück</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

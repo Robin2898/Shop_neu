@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">    
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+<div class="allgemein">
+    <h1>Produktsuche</h1>
+    <mat-form-field appearance="standard">
+      <mat-label>Produktfilter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Produktname" #input autocomplete="off">
+    </mat-form-field>
+  <table *ngFor = "let elem of this.alleproduktetemp">
+      <tr>
+        <td class="picture">
+          <img mat-card-image src= {{elem.bild}} alt="Bild kann nicht geladen werden" id="picture3">  
+        </td>
+        <td class="produktname">
+          {{elem.produktname}}
+        </td>
+        <td class="preis">
+          {{elem.preis | currency : 'EUR' : '' : '0.2' }}&nbsp;€
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <button mat-button style ="color:black;" id="buttonlinks" (click) = "navigateWarenkorb(elem);">In den Warenkorb</button>
+        </td>
+        <td>
+          <button mat-button style ="color:black;" id="buttonrechts" (click) ="navigateProdukte(elem);">Produkt</button>
+        </td>
+      </tr>
+  </table>
+  <div>
+    <p *ngIf="this.alleproduktetemp.length === 0 && this.input.value != ''">
+      Zu Ihrer Suchanfrage: "{{input.value}}" wurde kein passendes Ergebnis gefunden<br>
+      Bitte versuchen Sie einen anderen Begriff
+    </p>
+  </div>
+  </div>
+  </body>
+  </html>

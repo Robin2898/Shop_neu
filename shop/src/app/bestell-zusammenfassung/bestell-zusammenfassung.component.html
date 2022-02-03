@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">    
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+    <div class="top">
+        <h1>Bestellzusammenfassung</h1>
+    </div>
+    <div class="allgemein">
+    <div class="flex-container">
+      <div class="flex-item-left">
+            <h2 id="headline">Ihre Rechnungsadresse lautet:</h2>
+        <div class="container">
+            <div id="left">Anrede:</div> 
+            <div id="right">{{this.adresse.anrede}}</div>   
+            <div id="left">Vorname:</div> 
+            <div id="right">{{this.adresse.vorname}}</div>
+            <div id="left">Nachname:</div> 
+            <div id="right">{{this.adresse.nachname}}</div>
+            <div id="left">Anschrift:</div> 
+            <div id="right">{{this.adresse.adresse}}</div>   
+            <div id="left" *ngIf="this.adresse.adresszusatz!=''">Adresszusatz:</div> 
+            <div id="right" *ngIf="this.adresse.adresszusatz!=''">{{this.adresse.adresszusatz}}</div>            
+            <div id="left">E-Mail Adresse:</div> 
+            <div id="right">{{this.adresse.email}}</div>    
+            <div id="left">PLZ:</div> 
+            <div id="right">{{this.adresse.plz}}</div>
+            <div id="left">Stadt:</div> 
+            <div id="right">{{this.adresse.stadt}}</div>
+            <div id="left">Land:</div> 
+            <div id="right">{{this.adresse.land}}</div>
+            <div id="left" *ngIf="this.adresse.notiz!=''">Produkt-Personalisierung:</div> 
+            <div id="right" *ngIf="this.adresse.notiz!=''">{{this.adresse.notiz}}</div> 
+        </div>
+      </div>
+      <div class="flex-item-right">
+        <h2 id="headline">Zahlungs- und Versandinformationen</h2>
+        <mat-radio-group [(ngModel)]="buttonPosition">
+        <div class="container">
+            <div id="left">Zahlungsart:</div> 
+            <div><mat-radio-button value="zahlungversand">PayPal</mat-radio-button></div>
+        </div>
+        </mat-radio-group>
+        <mat-radio-group [(ngModel)]="buttonPosition" >
+        <div class="container">
+            <div id="left">Versandart:</div> 
+            <div><mat-radio-button value="zahlungversand" >DHL-Standardversand</mat-radio-button></div>
+            <div><mat-radio-button value="versand" >Abholung</mat-radio-button></div>              
+        </div>
+        </mat-radio-group>
+      </div>
+      <div class="flex-item-unten-left">
+        <button mat-button style ="color:black;" (click) = "navigatebestellabschluss();">Zurück zur Übersicht</button>
+      </div>
+      <div class="flex-item-unten-right">
+        <!-- <form class="contact-form" (submit)="sendEmail($event)">
+        <button mat-button style ="color:black;" type="submit" value="Send">Jetzt kaufen</button>
+        </form> -->
+        <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+      </div>
+    </div>
+    </div>
+</body>
+</html>

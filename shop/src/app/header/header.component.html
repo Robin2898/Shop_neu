@@ -1,0 +1,31 @@
+<div class="header">
+    <div id="kopfbereich">
+        <h1>Chrisubis-Hobby</h1>
+        <p>Holz und Beton, Deko made by Christine und Bianca</p>
+    </div>
+    <div> 
+        <mat-toolbar>
+            <div fxHide.gt-xs>
+                <button mat-icon-button (click)="onToggleSidenav()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div>
+            <div class="brand">Menü</div>
+            </div>
+            <div fxFlex fxLayout fxLayoutAlign="start" fxHide.xs>
+                <div fxLayout fxLayoutGap="15px" class="navigation-items">
+                    <button mat-button style ="color:white;" (click) ="navigateHome();">Home</button>
+                    <button mat-button style ="color:white;" (click) ="navigateShop();">Online-Shop</button>
+                    <button mat-button style ="color:white;" (click) ="navigateKontakt();">Kontakt</button>
+                </div> 
+                </div>         
+                <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+                <div fxLayout fxLayoutGap="15px" class="navigation-items">
+                    <button mat-button style ="color:white;" (click) ="navigateproduktsuche();" matTooltip="Produktsuche"><mat-icon>search</mat-icon></button>
+                    <button mat-button style ="color:white;" (click) ="navigatewunschliste();" matTooltip="Wunschliste"><mat-icon>favorite_border</mat-icon><span [matBadge]="this.navigateData.wunschlistenmenge()" matBadgeOverlap="false"></span></button>
+                    <button mat-button style ="color:white;" (click) ="navigateWarenkorb();" matTooltip="Warenkorb"><mat-icon>shopping_cart</mat-icon><span [matBadge]="this.navigateData.warenkorbmenge()" matBadgeOverlap="false"></span></button>
+                </div>   
+            </div>
+        </mat-toolbar>
+</div> 

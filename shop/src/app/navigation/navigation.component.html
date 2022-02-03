@@ -1,0 +1,20 @@
+<mat-nav-list>
+    <mat-list-item>
+    <button mat-button style ="color:white;" (click) = "navigatehomepage();" (click)="onSidenavClose()"><span class="nav-caption">Startseite</span></button>
+    </mat-list-item>
+    <mat-list-item>
+    <button mat-button style ="color:white;" (click) = "navigateshop();" (click)="onSidenavClose()"><span class="nav-caption">Online-Shop</span></button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button style ="color:white;" (click) = "navigatekontakt();" (click)="onSidenavClose()"><span class="nav-caption">Kontakt</span></button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button style ="color:white;" (click) = "navigateproduktsuche();" (click)="onSidenavClose()"><span class="nav-caption">Produktsuche</span></button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button style ="color:white;" (click) = "navigatewunschliste();" (click)="onSidenavClose()"><span class="nav-caption">Wunschliste</span>&nbsp;<span [matBadge]="this.navigateData.wunschlistenmenge()" matBadgeOverlap="false"></span></button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button style ="color:white;" (click) = "navigatewarenkorb();" (click)="onSidenavClose()"><span class="nav-caption">Warenkorb</span>&nbsp;<span [matBadge]="this.navigateData.warenkorbmenge()" matBadgeOverlap="false"></span></button>
+    </mat-list-item>
+</mat-nav-list>

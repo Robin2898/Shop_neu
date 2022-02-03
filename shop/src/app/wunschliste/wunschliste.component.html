@@ -1,0 +1,95 @@
+<!-- <!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">    
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+  <div class="flex-container">
+  <div class="allgemein">
+    <div class="headline">
+      <h1>Ihre Wunschliste</h1>
+    </div>
+  <div class="flex-item-left">
+  <table *ngFor = "let wunschliste of this.wunschliste">
+    <tr>
+      <td class="picture">
+        <img mat-card-image src= {{wunschliste.bild}} alt="Bild kann nicht geladen werden" id="picture3">  
+      </td>
+      <td class="produktname">
+        {{wunschliste.produktname}}
+      </td>
+      <td class="preis">
+        {{wunschliste.preis}} 
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <button mat-button style ="color:black;" id="buttonlinks" (click) ="navigateWarenkorb(wunschliste);">In den Warenkorb</button>
+      </td>
+      <td>
+        <button mat-button style ="color:black;" id="buttonrechts" (click) ="removeprodukt(wunschliste);">Löschen</button>
+      </td>
+    </tr>
+  </table>
+  </div>
+  </div>
+    <div class="flex-container">
+        <div class="flex-item-unten-left">
+          <button mat-button style ="color:black;" (click) = "navigateshop();">Zum Shop</button>
+        </div>
+      </div>
+  </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">    
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+<div class="allgemein">
+    <h1>Wunschliste</h1>
+  <table *ngFor = "let wunschliste of this.wunschliste">
+      <tr>
+        <td class="picture">
+          <img mat-card-image src= {{wunschliste.bild}} alt="Bild kann nicht geladen werden" id="picture3">  
+        </td>
+        <td class="produktname">
+          {{wunschliste.produktname}}
+        </td>
+        <td class="preis">
+          {{wunschliste.preis | currency : 'EUR' : '' : '0.2' }}&nbsp;€
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <button mat-button style ="color:black;" id="buttonlinks" (click) ="navigateWarenkorb(wunschliste);">In den Warenkorb</button>
+        </td>
+        <td>
+          <button mat-button style ="color:black;" id="buttonrechts" (click) ="removeprodukt(wunschliste);">Löschen</button>
+        </td>
+      </tr>
+  </table>
+  <!-- <div>
+    <div class="flex-container">
+      <div class="flex-item-unten-left">
+        <button mat-button style ="color:black;" (click) = "navigateshop();">Zum Shop</button>
+      </div>
+    </div>
+  </div> -->
+  </div>
+  <!-- <button mat-button style ="color:black;"  id="zueruck" (click) = "navigateshop();">Zum Shop</button> -->
+  </body>
+  </html>

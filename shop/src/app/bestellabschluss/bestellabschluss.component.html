@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">    
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+<div class="allgemein">
+    <div>
+        <h1>Bestellzusammenfassung</h1>
+    </div>
+<div class="flex-container">
+    <div class="flex-item-left">
+        <div>
+            <h2>Rechnungsadresse</h2>
+        </div>
+        <div class="container">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Anrede</mat-label>
+                      <mat-select name="anrede" required="required" [(ngModel)]="this.adresse.anrede">
+                        <mat-option selected>Bitte auswählen</mat-option>
+                        <mat-option value="Herr">Herr</mat-option>
+                        <mat-option value="Frau">Frau</mat-option>
+                        <mat-option value="Divers">Divers</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Vorname</mat-label>
+                      <input matInput name="vorname" required="required" [(ngModel)]="this.adresse.vorname" autocomplete="off">
+                    </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Nachname</mat-label>
+                      <input matInput name="nachname" required="required" [(ngModel)]="this.adresse.nachname" autocomplete="off">
+                    </mat-form-field>
+                </div>
+              </div>
+                <div class="form-group">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>E-Mail</mat-label>
+                    <input matInput name="email" required="required" [(ngModel)]="this.adresse.email" autocomplete="off">
+                  </mat-form-field>
+              </div>
+              <div class="form-group">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Addresse</mat-label>
+                  <input matInput name="adresse" required="required" [(ngModel)]="this.adresse.adresse" autocomplete="off">
+                </mat-form-field>
+              </div>
+              <div class="form-group">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Addresszusatz</mat-label>
+                  <input matInput name="adresszusatz" [(ngModel)]="this.adresse.adresszusatz" autocomplete="off">
+                </mat-form-field>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>PLZ</mat-label>
+                    <input matInput name="plz" required="required" [(ngModel)]="this.adresse.plz" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==5) return false;" placeholder="Ex. 12345" autocomplete="off">
+                  </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Stadt</mat-label>
+                    <input matInput name="stadt" required="required" [(ngModel)]="this.adresse.stadt" placeholder="Musterstadt" autocomplete="off">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="form-group">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Land</mat-label>
+                    <mat-select name="land" required="required" [(ngModel)]="this.adresse.land">
+                      <mat-option selected>Bitte auswählen</mat-option>
+                      <mat-option value="Deutschland">Deutschland</mat-option>
+                      <mat-option value="Österreich">Österreich</mat-option>
+                      <mat-option value="Schweiz">Schweiz</mat-option>
+                      <mat-option value="USA">USA</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+              </div>
+              <div class="form-group">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Produktanpassung/Personalisierung</mat-label>
+                  <textarea 
+                  matInput placeholder="Optionale Angabe"
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="20"
+                  autocomplete="off"
+                  pattern="/^-?\d+\.?\d*$/"
+                  type="textarea"
+                  name="notiz"
+                  [(ngModel)]="this.adresse.notiz">
+                </textarea>
+                </mat-form-field>
+              </div>
+              <div class="form-group" color='primary'>
+                <section class="example-section" color='primary'>
+                  <mat-checkbox class="example-margin" color='primary'>Abweichende Lieferadresse</mat-checkbox>
+                </section>          
+              </div>
+            </form>
+            </div>
+    </div>
+
+    <div class="flex-item-right-aussen">
+    <div class="flex-item-right">
+        <div>
+            <h2>Ihr Warenkorb</h2>
+        </div>
+        <mat-card class="example-card" *ngFor = "let elem of this.abschluss">
+            <img mat-card-image src={{elem.bild}} alt="Bild kann nicht geladen werden" (click) = "navigateProdukte(elem);" id="picture3">
+            <mat-card-content id="unten">
+                <h3>{{elem.produktname}}</h3>
+                <h4>Menge: {{elem.menge}}<br></h4>
+                <h4>Preis: {{elem.preis | currency : 'EUR' : '' : '0.2' }}&nbsp;€</h4>
+                <h4>Gesamtpreis: {{elem.komplettpreis | currency : 'EUR' : '' : '0.2'}}&nbsp;€</h4>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <h5>
+      <table>
+        <tr>
+          <td class= "headline">
+            <strong>Zwischensumme:</strong>&nbsp;
+          </td>
+          <td class="zwischensumme">
+            {{this.komplettpreis | currency : 'EUR' : '' : '0.2'}}&nbsp;€
+          </td>
+        </tr>
+        <tr>
+          <td class= "headline">
+            <strong>Versandkosten:</strong>&nbsp;
+          </td>
+          <td class="versand">
+            {{this.versandkostenpreis | currency : 'EUR' : '' : '0.2'}}&nbsp;€
+          </td>
+          </tr>
+          <tr>
+          <td class= "headline">
+            <strong>Gesamtpreis:</strong>&nbsp;
+          </td>
+          <td class="preis">
+            {{this.summe | currency : 'EUR' : '' : '0.2'}}&nbsp;€
+          </td>
+        </tr>
+      </table>
+    </h5>
+</div>
+        <div class="flex-item-unten-left">
+            <button mat-button style ="color:black;" (click) = "navigatewarenkorb();">Zurück zur Übersicht</button>
+        </div>
+        <div class="flex-item-unten-right">
+            <button mat-button style ="color:black;" type="submit" (click) = "wertenichtleer(adresse);">Zur Zusammenfassung</button>
+        </div>
+  </div>
+</div>
+
+</body>
+</html>

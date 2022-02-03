@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">     
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+<div class="allgemein">
+    <div class="headline">
+        <h1>{{this.headline}}</h1>
+    </div>
+<div>
+</div>
+<div class="flex-container">
+    <div class="flex-item-left" *ngFor = "let elem of this.DbService.response">
+        <img mat-card-image src={{elem.bild}} alt="Bild kann nicht geladen werden" id="picture3" (click) = "navigateProdukte(elem.id);">
+        <mat-card-content>
+            <h2 id="unten" (click) = "navigateProdukte(elem.id);">{{elem.produktname}}</h2>
+        </mat-card-content>
+    </div>
+</div>
+<div class="flex-container">
+    <div class="flex-item-unten-left">
+      <button mat-button style ="color:black;" (click) = "navigatekategorien();" >Zurück</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

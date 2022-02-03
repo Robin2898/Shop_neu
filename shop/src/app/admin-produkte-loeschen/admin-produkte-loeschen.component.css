@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* .flex-item-unten-left {
+    padding: 10px;
+    padding-left: 20px;
+    flex: 50%;
+    text-align: left;
+  }
+  
+  .flex-item-unten-right {
+    padding: 10px;
+    padding-right: 20px;
+    flex: 50%;
+    text-align: right;
+  } */
+
+  .flex-item-unten-left {
+    padding: 30px;
+    padding-left: 20px;
+    flex: 25%;
+    text-align: left;
+    /* max-width: 390px; */
+  }
+
+  .flex-item-unten-mitte {
+    padding: 30px;
+    padding-left: 10px;
+    flex: 25%;
+    text-align: center;
+    /* max-width: 390px; */
+  }
+  
+  .flex-item-unten-right {
+    padding: 30px;
+    padding-right: 30px;
+    flex: 25%;
+    text-align: right;
+    /* max-width: 390px; */
+  }
+  
+  @media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  }
+  
+  table {
+    width: 80%;
+    background-color: rgb(222, 228, 236);
+    border: 1px solid black;
+    justify-content: center;
+    padding-left: 100px;
+    box-shadow: none;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 80%;
+  }
+  
+  #picture3{
+    height: 70px;
+    width: 70px;
+  }
+  
+  .produktname{
+    padding-left: 20px;
+    width: 370px;
+    text-align: left;
+  }
+  
+  .preis{
+    text-align: center;
+    width: 150px;
+  }
+
+  h1 {
+    font-family: Georgia;
+    font-size: 33px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: rgb(222, 228, 236);
+  } 
+
+  .allgemein{
+    padding-top: 30px;
+    background-color: rgb(222, 228, 236);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+
+  .mat-button{
+    font-size: 18px;
+    font-family: Georgia;
+  }

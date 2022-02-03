@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+    <div class="allgemein">
+    <div class="flex-container" id="oben">
+        <button mat-button style ="color:black;" (click) ="navigateBewertungserstellung();">Neue Bewertung erstellen</button>
+    </div>
+    <div class="headline">
+        <h1>Bisherige Bewertungen:</h1>
+    </div>
+  <div class="flex-container">
+    <div class="flex-item-left" *ngFor = "let elem of this.DbService.response">
+        <mat-card-content id="unten">
+           <!-- <span *ngIf="elem.vorname === ''">{{elem.vorname}}</span> -->
+            <p>
+            Folgende Bewertung wurde von {{elem.vorname}}&nbsp;{{elem.nachname}} erstellt:
+            </p>
+            <p>
+            {{elem.bewertung}}
+            </p>
+        </mat-card-content>
+    </div>
+  </div>
+</div>
+</body>

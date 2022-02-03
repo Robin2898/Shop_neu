@@ -1,0 +1,205 @@
+  /* @import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
+  @import url(https://fonts.googleapis.com/css?family=EB+Garamond:regular,500,600,700,800,italic,500italic,600italic,700italic,800italic);
+  
+  * {
+          box-sizing: border-box;
+        }
+        
+        .flex-container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+    
+        .flex-item-left {
+          background-color: rgb(222, 228, 236);
+          padding-top: 30px;
+          flex: 100%;
+          text-align: center;
+        }
+        
+        .flex-item-right {
+          background-color: rgb(222, 228, 236);
+          padding-top: 30px;
+          flex: 50%;
+          text-align: center;
+        }
+
+        .flex-item-unten-left {
+            padding: 30px;
+            padding-left: 20px;
+            flex: 50%;
+            text-align: left;
+            max-width: 390px;
+          }
+        
+          .flex-item-unten-mitte {
+            padding: 30px;
+            padding-left: 10px;
+            flex: 50%;
+            text-align: center;
+            max-width: 390px;
+          }
+          
+          .flex-item-unten-right {
+            padding: 30px;
+            padding-right: 20px;
+            flex: 50%;
+            text-align: right;
+            max-width: 390px;
+          }
+          
+          @media (max-width: 800px) {
+            .flex-item-right, .flex-item-left {
+              flex: 100%;
+            }
+        }
+  
+        #unten p {
+          background-color: rgb(94, 120, 160);
+          margin: auto;
+          text-align: center;
+          width: 560px;
+          height: auto;
+          color: white;
+          padding: 5px;
+          font-size: 16px;
+        } 
+  
+        #oben{
+          flex: 5%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+  
+        #löschen{
+          margin-left: 30px;
+        }
+  
+        #picture3 {
+          height: 280px;
+          width: 280px;
+          margin: 0;
+          cursor: pointer;
+          }
+
+        .allgemein{
+            padding-top: 30px;
+            background-color: rgb(222, 228, 236);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: Georgia;
+            font-size: 33px;
+            padding-bottom: 20px;
+            text-align: center;
+            background-color: rgb(222, 228, 236);
+          } 
+
+        .headline{
+            padding-top: 20px;
+        }
+         */
+
+         @import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
+         @import url(https://fonts.googleapis.com/css?family=EB+Garamond:regular,500,600,700,800,italic,500italic,600italic,700italic,800italic);
+         
+         * {
+                 box-sizing: border-box;
+               }
+               
+               .flex-container {
+                 display: flex;
+                 flex-wrap: wrap;
+               }
+           
+               .flex-item-left {
+                 background-color: rgb(222, 228, 236);
+                 padding-top: 30px;
+                 flex: 100%;
+                 text-align: center;
+               }
+               
+               .flex-item-right {
+                 background-color: rgb(222, 228, 236);
+                 padding-top: 30px;
+                 flex: 50%;
+                 text-align: center;
+               }
+         
+               #unten p {
+                 background-color: rgb(94, 120, 160);
+                 margin: auto;
+                 text-align: center;
+                 max-width: 600px;
+                 min-width: 150px;
+                 height: auto;
+                 color: white;
+                 padding: 5px;
+                 font-size: 16px;
+               } 
+         
+               #oben{
+                 flex: 5%;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+               }
+         
+               #löschen{
+                 margin-left: 30px;
+               }
+         
+               #picture3 {
+                 height: 280px;
+                 width: 280px;
+                 margin: 0;
+                 cursor: pointer;
+                 }
+       
+               .allgemein{
+                   padding: 30px;
+               }
+       
+               h1 {
+                   font-family: Georgia;
+                   font-size: 33px;
+                   padding-bottom: 20px;
+                   text-align: center;
+                   background-color: rgb(222, 228, 236);
+                 } 
+       
+               .headline{
+                   padding-top: 20px;
+               }
+
+               .flex-item-unten-left {
+                padding: 30px;
+                padding-left: 20px;
+                flex: 25%;
+                text-align: left;
+                /* max-width: 390px; */
+              }
+            
+              .flex-item-unten-mitte {
+                padding: 30px;
+                padding-left: 10px;
+                flex: 25%;
+                text-align: center;
+                /* max-width: 390px; */
+              }
+              
+              .flex-item-unten-right {
+                padding: 30px;
+                padding-right: 30px;
+                flex: 25%;
+                text-align: right;
+                /* max-width: 390px; */
+              }

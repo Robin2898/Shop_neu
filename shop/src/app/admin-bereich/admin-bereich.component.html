@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">    
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+  <div class="allgemein">
+    <div class="headline">
+      <h1>Admin-Bereich-Übersicht</h1>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="flex-item-unten-left">
+      <button mat-button style ="color:black;" (click) = "navigateadminprodukte();">Produkte</button>
+    </div>
+    <div class="flex-item-unten-right">
+      <button mat-button style ="color:black;" (click) = "navigateadminbewertungen()">Bewertungen</button>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="flex-item-unten-left">
+      <button mat-button style ="color:black;" (click) = "navigateadminprodukteerstellen();">Produkte hinzufügen</button>
+    </div>
+    <div class="flex-item-unten-right">
+      <button mat-button style ="color:black;" (click) = "navigateadminprodukteentfernen()">Produkte löschen</button>
+    </div>
+  </div>
+    <div class="flex-container">
+        <div class="flex-item-unten-left">
+          <button mat-button style ="color:black;" (click) = "navigateshop();">Zum Shop</button>
+        </div>
+        <div class="flex-item-unten-right">
+          <button mat-button style ="color:black;" (click) = "logout()">Abmelden</button>
+        </div>
+      </div>
+</body>
+</html>

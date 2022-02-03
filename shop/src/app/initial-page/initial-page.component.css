@@ -1,0 +1,116 @@
+    @import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
+    @import url(https://fonts.googleapis.com/css?family=EB+Garamond:regular,500,600,700,800,italic,500italic,600italic,700italic,800italic);
+        
+        * {
+          box-sizing: border-box;
+        }
+    
+        .mat-card:not([class*=mat-elevation-z]) {
+          box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%);
+        }
+        
+        .flex-container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+    
+        #oben-links {
+          min-height: 300px;
+          flex: 50%;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+        }
+    
+        #oben-rechts {
+          min-height: 300px;
+          min-width: 200px;
+          flex: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 20px;
+        }
+    
+        .text{
+          max-width: 70%;
+          text-align: left;
+          margin: 0 auto; 
+        }
+    
+        #mitte-rechts{
+          background-color: rgb(160, 180, 206);
+          flex: 50%;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          min-height: 300px;
+          padding: 20px;
+        }
+    
+        #mitte-links{
+          background-color: rgb(160, 180, 206);
+          flex: 50%;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          color: white;
+          min-height: 300px;
+          min-width: 300px;
+          padding: 20px;
+        }
+    
+        #unten-rechts, #unten-links{
+          text-align: center;
+          flex: 50%;
+          background-color: rgb(222, 228, 236);
+          padding: 20px;
+        }
+    
+        .test{
+          background-color: rgb(94, 120, 160);
+          color: white;
+          text-align: center;
+          padding: 5px;
+          min-width: 70%;
+          max-width: 70%;
+          margin: auto;
+        }
+    
+        #picture1{
+          min-width: 50%;
+          max-width: 60%;
+        }
+    
+        #picture3 {
+          max-width: 70%;
+          max-height: 70%;
+        }
+    
+        h4 {
+          font-size: 25px;
+          font-family: Dancing Script;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+    
+        h2 {
+          font-family: Dancing Script;
+          font-size: 35px;
+        }
+    
+        h3 {
+          font-family: Dancing Script;
+          font-size: 35px;
+          text-align: center;
+        }
+    
+        p {
+          font-size: 18px;
+          font-family: Georgia;
+        }

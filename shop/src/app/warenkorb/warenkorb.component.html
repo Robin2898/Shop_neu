@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1">
+</head>
+<body>
+    <div class="allgemein">
+    <div class="headline">
+        <h1>Warenkorb</h1>
+    </div>
+
+    <div class="flex-container" id="oben">
+        <button mat-button style ="color:black;" id="bestellungsbutton" [disabled]="this.warenkorb === null || this.warenkorb.length === 0" (click) = "bestellabschluss();">Bestellung abschließen</button>
+    </div>
+
+  <div class="flex-container">
+    <div class="flex-item-left" *ngFor = "let elem of this.warenkorb">
+        <img mat-card-image src={{elem.bild}} alt="Bild kann nicht geladen werden" id="picture3" (click) = "navigateProdukte(elem);">
+        <mat-card-content id="unten">
+            <p>
+            {{elem.produktname}}
+            </p>
+            <p>
+            Einzelpreis:&nbsp;{{elem.preis | currency : 'EUR' : '' : '0.2' }}&nbsp;€
+            </p>
+            <p>
+            Gesamtpreis:&nbsp;{{elem.komplettpreis | currency : 'EUR' : '' : '0.2' }}&nbsp;€
+            </p>
+            <p>
+            <input type="number" min="1" matInput [(ngModel)]="elem.menge" name="menge" (input) = "onKey(elem, elem.menge);" placeholder="Menge" autocomplete="off">
+            <button mat-button style ="color:white;" id="löschen" (click) = "removeprodukt(elem);" (click) = "this.testfunction();">Löschen</button>
+            </p>
+        </mat-card-content>
+    </div>
+  </div>
+
+
+
+<!-- <input type="text" name="button1Name" id="clone_name" onclick="this.value=' '" value="Nachname, Vorname">
+<a href="#" onClick="clone_eintragen()">Eintragen</a>
+<div draggable="true" id="clone" class="vorlage">Max und Moritz - Erster Streich</div> -->
+
+<!-- <a href="javascript:window.print()">Diese Seite drucken</a> -->
+  
+
+  <div class="flex-container" id="oben">
+    <div id="bestellungsbutton">
+        <button mat-button style ="color:black;" id="bestellungsbutton" [disabled]="this.warenkorb === null || this.warenkorb.length === 0" (click) = "bestellabschluss();">Bestellung abschließen</button>
+    </div>
+  </div>
+</div>
+</body>
