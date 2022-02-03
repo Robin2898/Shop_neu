@@ -27,7 +27,7 @@ h3 {
 
 h1 {
   font-family: Georgia;
-  font-size: 33px;
+  font-size: 33px; 
   padding-bottom: 10px;
   text-align: center;
 }
@@ -36,7 +36,7 @@ h2 {
   font-size: 25px;
   margin:0;
   font-family: Georgia;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;  
 }
 
 .mat-card:not([class*=mat-elevation-z]) {
